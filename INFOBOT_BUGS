@@ -1,0 +1,29 @@
+Things that are bugs in infobot that we're replicating but should probably be fixed
+
+20:13 < sheriff> purl, foobar
+20:13 < purl> foobar is Friend's Of O'Reilly's bar or a bad spelling of FUBAR
+20:13 < sheriff> purl, foo what bar
+20:13 < purl> foobar is Friend's Of O'Reilly's bar or a bad spelling of FUBAR
+
+
+ IN: It's unpleasant without being even slightly titillating, and there's only so much WTF I can take.
+OUT: It's unpleasant without being even slightly titillating, and there's only so much
+
+
+21:50 < sheriff> purl, what country .in?
+21:50 < purl> .in is, like, india
+21:50 < mmlj4-work> purl, .in?
+21:50 < purl> i guess .in is india
+21:50 < sheriff> purl, what country .in
+21:50 < purl> .in is india
+
+11:26 < sheriff> purl, metasyntactic variables are my arse
+11:26 < purl> ...but metasyntactic variables is foo, bar, baz, barf, quux,
+              garbleflux or moo baa oink quack cluck warn die...
+11:26 < purl> ...but metasyntactic variables are foo, bar, baz, barf, quux,
+              garbleflux or moo baa oink quack cluck warn die...
+
+10:41 < hex> purl, computers are also our tin masters
+10:41 < purl> okay, hex.
+10:41 < purl> OK, hex.
+

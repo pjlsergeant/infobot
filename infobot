@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+
+	use strict;
+	use warnings;
+
+	use lib 'lib';
+	use Infobot;
+
+	my $config_file = $ARGV[0];
+
+	unless ( $config_file ) {
+
+		print "USAGE: ./infobot config_file\n";
+		exit;
+
+	}
+	
+	Infobot->start( $config_file );
+	

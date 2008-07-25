@@ -1,0 +1,23 @@
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Infobot
+version:      0.91_05
+version_from: lib/Infobot.pm
+installdirs:  site
+requires:
+    DBD::SQLite:                   
+    DBIx::Class:                   
+    DBIx::Class::Schema::Loader:   
+    File::Basename:                
+    HTML::TreeBuilder:             
+    HTTP::Request:                 
+    IO::Capture:                   
+    POE:                           
+    POE::Component::Client::HTTP:  
+    POE::Component::IRC:           
+    Term::ANSIColor:               
+    UNIVERSAL::require:            
+    YAML::Syck:                    
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.17

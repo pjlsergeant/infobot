@@ -1,0 +1,7 @@
+
+* Every plugin should have information about how to configure it in POD
+* Every base class should have a pointer to the 'How to write an x' docs
+* Infobot::Base should document the stash, and what lives in it
+* Infobot::Log should briefly explain how the multiplexer works, and how to write a log
+* Infobot::Pipeline should really point to how to write a query
+

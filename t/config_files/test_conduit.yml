@@ -1,0 +1,27 @@
+
+alias: surl
+
+log:
+   'Null Log':
+     class : t::lib::NullLog
+     level : 9 
+
+datasource:
+
+conduit:
+    'Test Conduit':
+      class : t::lib::TestConduit
+
+query:
+    'Rot13':
+      class    : Infobot::Plugin::Query::Rot13
+      priority : 1000
+    'Help System':
+      class    : Infobot::Plugin::Query::Help
+      priority : 1000
+    'Help Tester':
+      class    : t::lib::HelpTestQuery
+      priority : 0
+    'Catch All':
+      class    : t::lib::CatchAllQuery
+      priority : 1

@@ -1,0 +1,61 @@
+#!/usr/bin/perl
+
+=head2 000_integrity_020_pod_coverage
+
+Uses L<Pod::Coverage> to check that we have full POD coverage for all public functions
+in our libraries.
+
+=cut
+
+  use strict;
+  use warnings;
+
+	use Pod::Coverage;
+
+	use Infobot;
+	use Infobot::Base;
+	use Infobot::Log;
+
+  use Test::More;
+  use t::lib::Util;
+
+# Modules in the blib path to check
+
+  my @modules = t::lib::Util::find_packages();
+
+# Calculate correct number of tests we intend to run
+
+  plan tests => ( scalar @modules ) * 2;
+
+# Scan through the modules
+
+  for my $module_name ( @modules ) {
+
+  # Can we 'use' the module ok, first of all...
+
+    use_ok( $module_name );
+
+  # Test for POD coverage
+
+    my $pod = Pod::Coverage->new(package => $module_name );
+    my $score = $pod->coverage;
+    ok( ( $score == 1 ), "Full POD coverage for $module_name" );
+
+  # Spit out some useful information if anything isn't covered...
+
+    if ( !$score ) {
+
+      diag( $pod->why_unrated )
+
+    } elsif ( $score != 1 ) {
+
+      for ( $pod->naked ) {
+
+        diag("$_ not covered");
+
+      }
+
+    }
+
+  }
+

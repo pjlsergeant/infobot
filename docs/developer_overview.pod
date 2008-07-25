@@ -1,0 +1,67 @@
+
+=head1 NAME
+
+Infobot - Developer's Overview
+
+=head1 SYNOPSIS
+
+This document provides an overview for a developer interested in getting
+involved with Infobot development. It describes the main application startup
+process, and considerations that apply to the application as a whole.
+
+=head1 INFOBOT.PM
+
+The application is started by calling L<Infobot>'s C<start> method with a
+filename relating to a config file. The config file essentially lists which
+plugins should be loaded, and any configuration options for them.
+
+=head2 Loading process
+
+Several steps are taken loading a plugin. The process is slightly different
+depending on the plugin class (C<log>, C<database>, C<conduit>, C<datasource>,
+C<query>), but basically consists of:
+
+=head3 require
+
+We attempt to load the class in to C<perl> using L<UNIVERSAL::require> - 
+it's very similar to the process of saying C<use Infobot::YourModule> - we
+throw a fatal error if the module can't be loaded in this way.
+
+=head3 load
+
+
+
+
+
+
+=head1 BASE CLASSES AND CLASS LAYOUT
+
+Every class in the application should inherit from L<Infobot::Base>, which
+provides some useful tools.
+
+=head2 load
+
+Every class which is loaded via the configuration file (which is probably any
+class you're likely to write) will be tested to see if it can be included - the
+result of C<load> 
+
+=head2 new
+
+So that any errors or issues can be related to a specific object, the object
+instantiator is intended to be as lightweight as possible. L<Infobot::Base>
+provides a very lightweight instantiator, which you really don't need to
+override - any setup should be done in C<init>, which brings us to...
+
+=head2 init
+
+C<init> is where object setup which might normally be placed 
+
+
+
+
+
+Plugin division
+How logging work
+How the pipeline works
+How the config works
+How POE fites in
