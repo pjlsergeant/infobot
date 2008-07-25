@@ -1,18 +1,16 @@
 Milestone 1:
 
-Conduits:
-	! Test IRC conduit
-	! Test Tk conduit
+	Get a fully documented and unit-tested base up, with working
+	examples of queries that use HTTP and DBIx.
 
 Logging:
-	- Complete the ASCII Colour log tests
+	- Move to Log4Perl
 
 Datasources:
 	- How to write a datasource
 
 Queries:
-	- Document Factoids
-	- Test Factoids
+	- Include a DB Gender tool
 	- Document GoogleDefine
 	- Test GoogleDefine
 	- Document Rot13
@@ -24,7 +22,9 @@ Queries:
 
 Fix tests:
 	- Get to 100% coverage again
-
+	! Test IRC conduit
+	! Test Tk conduit
+	
 Other:
 	- Proper quick-start guide
 	- Document and test everything so far
