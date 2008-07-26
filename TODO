@@ -3,69 +3,29 @@ Milestone 1:
 	Get a fully documented and unit-tested base up, with working
 	examples of queries that use HTTP and DBIx.
 
-Logging:
-	- Move to Log4Perl
-
-Datasources:
-	- How to write a datasource
-
-Queries:
-	- Include a DB Gender tool
-	- Document GoogleDefine
-	- Test GoogleDefine
-	- Document Rot13
-	- Document Help
-	- Document HTTP Base
-	- Document DBIx Base
-	- Sort RSS stuff
-	- How to write a simple query
-
-Fix tests:
-	- Get to 100% coverage again
-	! Test IRC conduit
-	! Test Tk conduit
-	
-Other:
-	- Proper quick-start guide
-	- Document and test everything so far
+	- Make the main logging class Log4Perl. Move others to the graveyard
+	- Documentation
+		- Document how to write each of the plugin types
+		- Write a quick-start guide, including setting up a factoids.db
+		- Fix docs so they turn up nicely on CPAN
+	+ Include the DB Gender tool
+	- 100% covereage, including POD
 	- Logging code review of all code
 	- Code-doc review of all code
 
-Completed:
-	+ Bug: ANSI - 5 is bold, 4 is not?
-	+ Document IRC conduit
-	+ Document Tk conduit
-	+ Document conduit base class
-	+ Write a 'conduit writing guide'
-	+ Complete the STDERR Log tests
-	+ Complete the STDERR docs
-	+ Complete the ASCII Colour docs
-	+ Write a logging writing guide
-	+ Move datasources to a more sensible location
-	+ Split out base classes properly
-	+ Document HTTP
-	+ Test HTTP
-	+ Document DBIx::Class
-	+ Test DBIx::Class
-	+ Add factoids help
-	+ Add GoogleDefine help
-	+ Test Rot13
-	+ Test Help
-	+ Tests pass
-	+ Include all the plugins in coverage
-	+ Run as pretty as possible
-	+ Remove network tests
-	+ Sensible help system
-	+ Put unused stuff in the graveyard
-	+ Fix SVN
 
 Milestone 2:
 
+	Add the required plugins to make it purl-compatible
+	Write a cross-over tool
+	Get it running the real Purl
+
 	- Injection class
-	- Document Greeting
-	- Test Greeting
-	- Fix Karma
-	- Document Karma
-	- Test Karma
-	- Document RSS
-	- Test RSS
+	- Karma
+	- Factoids
+	- RSS
+	- Greeting
+
+Milestone 3:
+
+	Set up a website
